@@ -1,0 +1,329 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+.main-backimg {
+  background-image: url("../image/fffvbackground_image.png");
+  background-size: cover;
+  padding-bottom: 7rem;
+}
+
+header {
+  height: 25rem;
+}
+
+.header__top {
+  width: 85%;
+  height: 20rem;
+  background-image: url("../image/list-background.png");
+  background-size: cover;
+  background-position-x: 50%;
+  background-position: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.header__top__logo {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 5rem;
+}
+.header__top__logo__text {
+  font-size: 4rem;
+  margin-right: 5rem;
+  font-family: "ab-kirigirisu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 11rem;
+}
+
+.header__top__list {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.header__top__list ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: "ab-kirigirisu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.header__top__list ul a {
+  text-decoration: none;
+}
+.header__top__list ul li {
+  padding: 0 1.5rem;
+}
+.header__top__list ul .jp {
+  font-size: 2.4rem;
+  color: #433D3C;
+  font-size: 2.4rem;
+  padding-bottom: 0.9rem;
+}
+.header__top__list ul .en {
+  font-size: 1.8rem;
+  color: #D9333F;
+  font-size: 1.8rem;
+}
+
+.top-heading {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.top-heading__text {
+  padding-bottom: 60rem;
+  padding-top: 15rem;
+}
+.top-heading__img {
+  margin-right: 100%;
+}
+
+.news-wrap {
+  margin-top: 7rem;
+  width: 93rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 12rem;
+}
+.news-wrap a {
+  text-decoration: none;
+}
+.news-wrap__imgtop {
+  padding-bottom: 3rem;
+}
+.news-wrap__flex {
+  display: flex;
+  padding-bottom: 2rem;
+  width: 93rem;
+}
+.news-wrap__flex__sideimg {
+  padding-right: 4rem;
+}
+.news-wrap__flex__list {
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.news-wrap__flex__list__date {
+  font-size: 1.8rem;
+  color: #2F5D50;
+}
+.news-wrap__flex__list__text {
+  font-size: 1.8rem;
+  color: #433D3C;
+}
+.news-wrap__flex__list__title {
+  font-size: 2rem;
+  color: #D9333F;
+}
+.news-wrap__flex__more {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  display: block;
+  text-align: right;
+}
+.news-wrap__flex__imgbottom img {
+  padding-bottom: 9rem;
+  width: 93rem;
+}
+
+.about-wrap {
+  width: 99rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 7rem;
+}
+.about-wrap__img {
+  padding-bottom: 6.5rem;
+}
+
+.about-wrap__flexone {
+  width: 91rem;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  padding-bottom: 5rem;
+}
+.about-wrap__flexone__img {
+  padding-left: 4rem;
+}
+.about-wrap__flexone__text {
+  width: 40rem;
+}
+.about-wrap__flexone__text img {
+  width: 40rem;
+}
+.about-wrap__flexone__text__text {
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.about-wrap__flexsec {
+  width: 91rem;
+  margin-left: 0;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.about-wrap__flexsec__img {
+  padding-right: 4.5rem;
+}
+.about-wrap__flexsec__text {
+  width: 40rem;
+}
+.about-wrap__flexsec__text img {
+  width: 37rem;
+}
+.about-wrap__flexsec__text__text {
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.product-wrap {
+  width: 99rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 6.7rem;
+}
+.product-wrap__img {
+  padding-bottom: 5.6rem;
+}
+.product-wrap__flex {
+  display: flex;
+}
+.product-wrap__flex__img {
+  padding-right: 3rem;
+}
+.product-wrap__flex__right__text {
+  padding-left: 11.3rem;
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  color: #433D3C;
+}
+
+.product-wrap__flex__right__show {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: 3rem;
+}
+
+.slider {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider__top {
+  width: 99rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 4rem;
+}
+
+.slider__track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider__track__slide {
+  min-width: 30%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.slider__track__slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.slider__bottom {
+  width: 99rem;
+  text-align: right;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.question__title {
+  width: 99rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion-area {
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-area li {
+  margin: 10px 0;
+}
+
+.accordion-area section {
+  border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.question__accordion-area__flex__title {
+  position: relative; /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: 8rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all 0.5s ease;
+}
+
+/*アイコンの＋と×*/
+.question__accordion-area__flex__title::before,
+.question__accordion-area__flex__title::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #333;
+}
+
+.question__accordion-area__flex__title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
+}
+
+.question__accordion-area__flex__title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+
+/*　closeというクラスがついたら形状変化　*/
+.question__accordion-area__flex__title.close::before {
+  transform: rotate(45deg);
+}
+
+.question__accordion-area__flex__title.close::after {
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.question__accordion-area__box {
+  background: #f3f3f3;
+  margin: 0 3% 3% 3%;
+  padding: 3%;
+}
