@@ -7,11 +7,13 @@
 html{
     font-size:62.5%;
     background-color: $gray;
+    margin-top:0;
 }
 .main-backimg{
     background-image: url("../image/fffvbackground_image.png");
     background-size: cover;  //1500以下でconteinへ
     padding-bottom:7rem;
+    position: relative;
     
 
 }
@@ -21,16 +23,18 @@ header{
 }
 .header__top{
     width:85%;
-    height:20rem;
-    background-image: url("../image/list-background.png");
-    background-size:cover;
-    background-position-x: 50%;
-    background-position:0 20px;
+    height:13rem;
+    background-color: $white;
+    border-radius: 8rem;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin-top:5rem;
     margin-left:auto;
     margin-right:auto;
     display:flex;
-    padding-top:5rem;
-    
     text-align: center;
     
     
@@ -39,34 +43,44 @@ header{
     display:flex;
     margin-top:auto;
     margin-bottom:auto;
-    padding-left:5rem;
+    padding-left:3rem;
     &__text{
         font-size:4rem;
         margin-right:5rem;
         font-family:$font-ab;
         font-weight: 400;
         font-style: normal;
-        height:11rem;
+        margin-top:auto;
+        margin-bottom:auto;
         
     }
     
     
 }
 .header__top__list{
-    margin-top:auto;
-    margin-bottom:auto;
+    margin-top:4rem;
+    margin-bottom:4rem;
+    flex-grow: 0.5;
+   
     ul{
         list-style: none;
         display:flex;
+        align-items: center;
         justify-content: space-between;
         font-family:$font-ab;
         font-weight: 400;
         font-style: normal;
+        white-space: nowrap;
+        text-align:center;
         a{
-            text-decoration:none;;
+            text-decoration:none;
+            display:flex;
+            flex-direction: column;
+            
         }
         li{
-            padding:0 1.5rem;
+           
+            text-align: center;
         }
         .jp{
             font-size:2.4rem;
@@ -401,6 +415,95 @@ margin-left:auto;
     }
 }
 
+
+.contact{
+    width:96rem;
+    margin-top:12rem;
+    margin-left:auto;
+    margin-right:auto;
+    padding:3%;
+    font-family:$font-tsuku-b;
+    font-weight:700;
+    background-color: $white;
+    border-radius: 70px;
+}
 .contact__title{
     display:flex;
+    font-size:2rem;
+    p{
+        padding-left:3rem;
+        color:$black;
+    }
+}
+.contact__form{
+
+    &__caution{
+        padding-top:5rem;
+        padding-bottom:1rem;
+        color:$red;
+        font-size:2rem;
+    }
+
+    &__group,
+    &__group-short,
+    &__group-privacy{
+        color:$black;
+        font-size:2.2rem;
+        padding-bottom:3rem;
+      
+        .required{
+            color:$red;
+        }
+        .privacy-policy{
+            color:$red;
+        }
+    
+    }
+    &__group-botton{
+        text-align:center;
+       button{
+        font-size:2rem;
+        color:$white;
+        background-color: $green;
+        text-align:center;
+        border-radius: 20px;
+        padding:2rem 9rem;
+       }
+    }
+}
+label[for="name"],
+label[for="ruby"],
+label[for="email"],
+label[for="tel"],
+label[for="message"]{
+    display: inline-block;
+    width: 30%;
+}
+label[for="message"]{
+    vertical-align:top;
+}
+.contact__form__group-short input,
+.contact__form__group input,
+.contact__form__group textarea{
+    border: 1px solid #D0D0D0; 
+    padding: 0.5rem; 
+    border-radius: 1.5rem; 
+    box-sizing: border-box; 
+}
+.contact__form__group-short input{
+    width:33%;
+}
+.contact__form__group input,
+.contact__form__group textarea {
+    width:60%;
+}
+
+
+
+
+.contact__form__group input:focus,
+.contact__form__group textarea:focus {
+    border-color: #66afe9; /* フォーカス時の枠の色 */
+    outline: none; /* デフォルトのアウトラインを消す */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* フォーカス時のシャドウ効果 */
 }

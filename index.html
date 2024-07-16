@@ -295,38 +295,43 @@
         <div class="contct__form">
             <p class="contact__form__caution">※は必須項目です。</p>
             <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">お名前 <span class="required">*</span></label>
+                <div class="contact__form__group-short">
+                    <label for="name">お名前 <span class="required">※</span></label>
                     <input type="text" id="name" name="name" required>
                 </div>
-                <div class="form-group">
-                    <label for="furigana">ふりがな <span class="required">*</span></label>
+                <div class="contact__form__group-short">
+                    <label for="ruby">ふりがな <span class="required">※</span></label>
                     <input type="text" id="ruby" name="ruby" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス <span class="required">*</span></label>
+                <div class="contact__form__group">
+                    <label for="email">メールアドレス <span class="required">※</span></label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                <div class="form-group">
-                    <label for="phone">電話番号 <span class="required">*</span></label>
+                <div class="contact__form__group">
+                    <label for="tel">電話番号 <span class="required">※</span></label>
                     <input type="tel" id="tel" name="tel" required>
                 </div>
-                <div class="form-group">
-                    <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                <div class="contact__form__group">
+                    <label for="message">お問い合わせ内容 <span class="required">※</span></label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <div class="form-group">
+                <div class="contact__form__group-privacy">
                     <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">個人情報の取り扱いについて <a href="#">プライバシーポリシー</a>をご確認いただき、同意の上送信してください。</label>
+                    <label for="privacy">個人情報の取り扱いについて <a class="privacy-policy" href="#">プライバシーポリシー</a>をご確認いただき、同意の上送信してください。</label>
                 </div>
-                <div class="form-group">
+    <div class="footer-backimg">
+                <div class="contact__form__group-botton">
                     <button type="submit">入力内容を確認する</button>
                 </div>
             </form>
         </div>
-
-
     </section>
+
+    <footer>
+
+    </footer>
+    </div>
+
 
 
 
