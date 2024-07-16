@@ -219,38 +219,111 @@
 
         <ul class="question__accordion-area">
             <li>
-              <div>
+              <section>
                 <div class="question__accordion-area__flex">
                     <img class="question__accordion-area__flex__Q" src="image/Q.png" alt="">
                     <p class="question__accordion-area__flex__title">いちご狩りに行きたいのですが、どうやって予約しますか？</p>
                 </div>
-                <div class="question__accordion-area__box">
+                <div class="question__accordion-area__bottom">
+                <div class="question__accordion-area__bottom__box">
                     <img src="image/A.png" alt="">    
-                    <p class="question__accordion-area__box__text">ページトップの「ご予約はこちら」ボタンよりご予約へおすすみください。</p>
+                    <p class="question__accordion-area__bottom__box__text">ページトップの「ご予約はこちら」よりご予約へおすすみください。</p>
                 </div>
-              </div>
-            </li>
-            <li>
-              <section>
-                <h3 class="title">地方ですが発注は可能でしょうか</h3>
-                <div class="box">
-                  <p>可能です。お気軽にご相談ください。</p>
+                <div>
+                    <img src="image/strawberry.png" alt="">
                 </div>
+                </div>
+                
+                
+
               </section>
             </li>
             <li>
-              <section>
-                <h3 class="title">セミナーやイベントの出演を依頼したいのですが</h3>
-                <div class="box">
-                  <p>お問い合わせフォームより日時や内容などをご記入いただきご相談ください。</p>
-                </div>
-              </section>
+                <section>
+                    <div class="question__accordion-area__flex">
+                        <img class="question__accordion-area__flex__Q" src="image/Q.png" alt="">
+                        <p class="question__accordion-area__flex__title">いちご狩りに行きたいのですが、どうやって予約しますか？</p>
+                    </div>
+                    <div class="question__accordion-area__bottom">
+                    <div class="question__accordion-area__bottom__box">
+                        <img src="image/A.png" alt="">    
+                        <p class="question__accordion-area__bottom__box__text">ページトップの「ご予約はこちら」よりご予約へおすすみください。</p>
+                    </div>
+                    <div>
+                        <img src="image/strawberry.png" alt="">
+                    </div>
+                    </div>
+                    
+                    
+    
+                  </section>
+            </li>
+            <li>
+                <section>
+                    <div class="question__accordion-area__flex">
+                        <img class="question__accordion-area__flex__Q" src="image/Q.png" alt="">
+                        <p class="question__accordion-area__flex__title">いちご狩りに行きたいのですが、どうやって予約しますか？</p>
+                    </div>
+                    <div class="question__accordion-area__bottom">
+                    <div class="question__accordion-area__bottom__box">
+                        <img src="image/A.png" alt="">    
+                        <p class="question__accordion-area__bottom__box__text">ページトップの「ご予約はこちら」よりご予約へおすすみください。</p>
+                    </div>
+                    <div class="question__accordion-area__bottom__berry">
+                        <img src="image/strawberry.png" alt="">
+                    </div>
+                    </div>
+                    
+                    
+    
+                  </section>
               
             </li>
           </ul>
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="/js/accordion.js"></script>
 
+    </section>
+
+
+    <section class="contact">
+        <div class="contact__title">
+            <img src="image/contact_logo.png" alt="">
+            <p>タイトルがここに入ります。タイトルがここに入ります。タイトルがここに入ります。タイトルがここに入ります。</p>
+        </div>
+        <div class="contct__form">
+            <p class="contact__form__caution">※は必須項目です。</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="furigana">ふりがな <span class="required">*</span></label>
+                    <input type="text" id="ruby" name="ruby" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">電話番号 <span class="required">*</span></label>
+                    <input type="tel" id="tel" name="tel" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">個人情報の取り扱いについて <a href="#">プライバシーポリシー</a>をご確認いただき、同意の上送信してください。</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit">入力内容を確認する</button>
+                </div>
+            </form>
+        </div>
 
 
     </section>
@@ -260,6 +333,5 @@
 
 
 
-    <script src="/js/accordion.js"></script>
 </body>
 </html>
