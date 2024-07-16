@@ -2,12 +2,14 @@
 html {
   font-size: 62.5%;
   background-color: #F3F3F2;
+  margin-top: 0;
 }
 
 .main-backimg {
   background-image: url("../image/fffvbackground_image.png");
   background-size: cover;
   padding-bottom: 7rem;
+  position: relative;
 }
 
 header {
@@ -16,15 +18,18 @@ header {
 
 .header__top {
   width: 85%;
-  height: 20rem;
-  background-image: url("../image/list-background.png");
-  background-size: cover;
-  background-position-x: 50%;
-  background-position: 0 20px;
+  height: 13rem;
+  background-color: #FDFDFD;
+  border-radius: 8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  padding-top: 5rem;
   text-align: center;
 }
 
@@ -32,7 +37,7 @@ header {
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
-  padding-left: 5rem;
+  padding-left: 3rem;
 }
 .header__top__logo__text {
   font-size: 4rem;
@@ -40,26 +45,33 @@ header {
   font-family: "ab-kirigirisu", sans-serif;
   font-weight: 400;
   font-style: normal;
-  height: 11rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .header__top__list {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  flex-grow: 0.5;
 }
 .header__top__list ul {
   list-style: none;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-family: "ab-kirigirisu", sans-serif;
   font-weight: 400;
   font-style: normal;
+  white-space: nowrap;
+  text-align: center;
 }
 .header__top__list ul a {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 .header__top__list ul li {
-  padding: 0 1.5rem;
+  text-align: center;
 }
 .header__top__list ul .jp {
   font-size: 2.4rem;
@@ -354,6 +366,90 @@ header {
   padding-right: 2rem;
 }
 
+.contact {
+  width: 96rem;
+  margin-top: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3%;
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  background-color: #FDFDFD;
+  border-radius: 70px;
+}
+
 .contact__title {
   display: flex;
+  font-size: 2rem;
+}
+.contact__title p {
+  padding-left: 3rem;
+  color: #433D3C;
+}
+
+.contact__form__caution {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  color: #D9333F;
+  font-size: 2rem;
+}
+.contact__form__group, .contact__form__group-short, .contact__form__group-privacy {
+  color: #433D3C;
+  font-size: 2.2rem;
+  padding-bottom: 3rem;
+}
+.contact__form__group .required, .contact__form__group-short .required, .contact__form__group-privacy .required {
+  color: #D9333F;
+}
+.contact__form__group .privacy-policy, .contact__form__group-short .privacy-policy, .contact__form__group-privacy .privacy-policy {
+  color: #D9333F;
+}
+.contact__form__group-botton {
+  text-align: center;
+}
+.contact__form__group-botton button {
+  font-size: 2rem;
+  color: #FDFDFD;
+  background-color: #2F5D50;
+  text-align: center;
+  border-radius: 20px;
+  padding: 2rem 9rem;
+}
+
+label[for=name],
+label[for=ruby],
+label[for=email],
+label[for=tel],
+label[for=message] {
+  display: inline-block;
+  width: 30%;
+}
+
+label[for=message] {
+  vertical-align: top;
+}
+
+.contact__form__group-short input,
+.contact__form__group input,
+.contact__form__group textarea {
+  border: 1px solid #D0D0D0;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+}
+
+.contact__form__group-short input {
+  width: 33%;
+}
+
+.contact__form__group input,
+.contact__form__group textarea {
+  width: 60%;
+}
+
+.contact__form__group input:focus,
+.contact__form__group textarea:focus {
+  border-color: #66afe9; /* フォーカス時の枠の色 */
+  outline: none; /* デフォルトのアウトラインを消す */
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* フォーカス時のシャドウ効果 */
 }
