@@ -325,22 +325,22 @@ header {
 .question__accordion-area__flex::before {
   top: 48%;
   right: 3rem;
-  transform: rotate(0deg);
+  transform: rotate(45deg);
 }
 
 .question__accordion-area__flex::after {
   top: 48%;
   right: 3rem;
-  transform: rotate(90deg);
+  transform: rotate(-45deg);
 }
 
 /*　closeというクラスがついたら形状変化　*/
 .question__accordion-area__flex.close::before {
-  transform: rotate(45deg);
+  transform: rotate(0deg);
 }
 
 .question__accordion-area__flex.close::after {
-  transform: rotate(-45deg);
+  transform: rotate(90deg);
 }
 
 /*アコーディオンで現れるエリア*/
@@ -432,7 +432,7 @@ label[for=message] {
 .contact__form__group-short input,
 .contact__form__group input,
 .contact__form__group textarea {
-  border: 1px solid #D0D0D0;
+  border: 1px solid #d0d0d0;
   padding: 0.5rem;
   border-radius: 1.5rem;
   box-sizing: border-box;
