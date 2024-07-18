@@ -350,13 +350,13 @@ header {
 .question__accordion-area__flex::before {
   top: 48%;
   right: 3rem;
-  transform: rotate(45deg);
+  transform: rotate(0deg);
 }
 
 .question__accordion-area__flex::after {
   top: 48%;
   right: 3rem;
-  transform: rotate(-45deg);
+  transform: rotate(0deg);
 }
 
 /*　closeというクラスがついたら形状変化　*/
@@ -392,7 +392,7 @@ header {
 }
 
 .contact {
-  width: 96rem;
+  width: 110rem;
   margin-top: 12rem;
   margin-left: auto;
   margin-right: auto;
@@ -401,11 +401,15 @@ header {
   font-weight: 700;
   background-color: #FDFDFD;
   border-radius: 70px;
+  padding-bottom: 18rem;
 }
 
 .contact__title {
   display: flex;
   font-size: 2rem;
+}
+.contact__title img {
+  height: 12.6rem;
 }
 .contact__title p {
   padding-left: 3rem;
@@ -477,4 +481,72 @@ label[for=message] {
   border-color: #66afe9; /* フォーカス時の枠の色 */
   outline: none; /* デフォルトのアウトラインを消す */
   box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* フォーカス時のシャドウ効果 */
+}
+
+.footer {
+  width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15rem;
+  display: flex;
+  color: #FDFDFD;
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  position: relative;
+}
+.footer__logo {
+  padding-right: 2.5rem;
+}
+.footer__address {
+  font-size: 2rem;
+}
+.footer__address__tel {
+  padding-top: 6rem;
+}
+.footer__menu {
+  margin-right: 0;
+  margin-left: auto;
+  padding-top: 4rem;
+}
+.footer__menu__list {
+  display: flex;
+}
+.footer__menu__list a {
+  text-decoration: none;
+  padding-top: 0.5rem;
+}
+.footer__menu__list a li {
+  list-style: none;
+  color: #FDFDFD;
+  font-size: 1.8rem;
+}
+
+.list__top {
+  padding-right: 6rem;
+}
+
+.footer__copy {
+  padding-top: 3.6rem;
+  padding-bottom: 4.2rem;
+}
+.footer__copy__text {
+  text-align: center;
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #FDFDFD;
+}
+
+.footer__back {
+  display: grid;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  margin-top: -80rem;
+}
+.footer__back img {
+  height: 80rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
