@@ -100,6 +100,8 @@ header {
         margin-right: 100%;
     }
 }
+
+//NEWSーーーーーーーーーーーーーーーーーーーーーーーーーー
 .news-wrap {
     margin-top: 7rem;
     width: 93rem;
@@ -149,7 +151,7 @@ header {
         }
     }
 }
-
+//About usーーーーーーーーーーーーーーーーーーーーーーーーーー
 .about-wrap {
     width: 99rem;
     margin-left: auto;
@@ -209,6 +211,7 @@ header {
     }
 }
 
+//Productsーーーーーーーーーーーーーーーーーーーーーーーーーー
 .product-wrap {
     width: 99rem;
     margin-left: auto;
@@ -240,7 +243,7 @@ header {
     justify-content: flex-end;
     padding-top: 3rem;
 }
-
+// ラインアップーーーーーーーーーーーーーーーーーーーーーーーーーー
 .slider {
     overflow: hidden;
     margin: 0 auto;
@@ -302,6 +305,7 @@ header {
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
 
+// Q＆Aーーーーーーーーーーーーーーーーーーーーーーーー
 
 .question {
     &__title {
@@ -355,16 +359,18 @@ header {
     background-color: $red;
     font-family: $font-tsuku-b;
     font-weight: 700;
+
 }
 .question__accordion-area__flex::before {
     top: 48%;
     right: 3rem;
-    transform: rotate(45deg);
+    transform: rotate(0deg);
+
 }
 .question__accordion-area__flex::after {
     top: 48%;
     right: 3rem;
-    transform: rotate(-45deg);
+    transform: rotate(0deg);
 }
 /*　closeというクラスがついたら形状変化　*/
 .question__accordion-area__flex.close::before {
@@ -397,8 +403,9 @@ header {
     }
 }
 
+// コンタクトフォームーーーーーーーーーーーーーーーーーーーーーーーー
 .contact {
-    width: 96rem;
+    width: 110rem;
     margin-top: 12rem;
     margin-left: auto;
     margin-right: auto;
@@ -407,10 +414,14 @@ header {
     font-weight: 700;
     background-color: $white;
     border-radius: 70px;
+    padding-bottom:18rem;
 }
 .contact__title {
     display: flex;
     font-size: 2rem;
+    img{
+        height:12.6rem;
+    }
     p {
         padding-left: 3rem;
         color: $black;
@@ -482,4 +493,77 @@ label[for="message"] {
     border-color: #66afe9; /* フォーカス時の枠の色 */
     outline: none; /* デフォルトのアウトラインを消す */
     box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* フォーカス時のシャドウ効果 */
+}
+
+// footerーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.footer{
+    width:120rem;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:15rem;
+    display:flex;
+    color:$white;
+    font-family:$font-tsuku-b;
+    font-weight: 700;
+    position:relative;
+
+    &__logo{
+        padding-right:2.5rem;
+    }
+    &__address{
+        font-size:2rem;
+        &__tel{
+            padding-top:6rem;
+        }
+        
+    }
+    &__menu{
+        margin-right:0;
+        margin-left:auto;
+        padding-top:4rem;
+        &__list{
+            display:flex;
+            
+            a{
+                text-decoration:none;
+                padding-top:0.5rem;
+                li{
+                    list-style: none;
+                    color:$white;
+                    font-size:1.8rem;
+
+                
+                }
+            }
+            }
+            
+        }
+}
+.list__top{
+    padding-right:6rem;
+}
+.footer__copy{
+    padding-top:3.6rem;
+    padding-bottom:4.2rem;
+    &__text{
+        text-align: center;
+        font-family:$font-tsuku-b;
+        font-weight: 700;
+        font-size:1.2rem;
+        color:$white;
+    }
+}
+.footer__back{
+    display:grid;
+    position:absolute;
+    z-index: -1;
+    width:100%;
+    margin-top:-80rem;
+
+    img{
+        height:80rem;
+        width:100%;
+        object-fit:cover;
+        
+    }
 }
