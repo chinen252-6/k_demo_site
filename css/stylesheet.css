@@ -101,6 +101,19 @@ header {
   margin-right: 100%;
 }
 
+.top-backimg {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  margin-top: -25rem;
+}
+.top-backimg img {
+  height: 115rem;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .news-wrap {
   margin-top: 7rem;
   width: 93rem;
@@ -297,6 +310,19 @@ header {
   transform: scale(1.2, 1.2);
 }
 
+.middle-backimg {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  margin-top: -85rem;
+}
+.middle-backimg img {
+  height: 90rem;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .question__title {
   width: 99rem;
   margin-left: auto;
@@ -483,6 +509,10 @@ label[for=message] {
   box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* フォーカス時のシャドウ効果 */
 }
 
+footer {
+  width: 100%;
+}
+
 .footer {
   width: 120rem;
   margin-left: auto;
@@ -538,7 +568,6 @@ label[for=message] {
 }
 
 .footer__back {
-  display: grid;
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -547,6 +576,6 @@ label[for=message] {
 .footer__back img {
   height: 80rem;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
 }

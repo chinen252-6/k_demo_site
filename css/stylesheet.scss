@@ -100,6 +100,20 @@ header {
         margin-right: 100%;
     }
 }
+// ------------------------------------------------------
+.top-backimg{
+    position: absolute;
+    z-index: -100;
+    width:100%;
+    margin-top:-25rem;
+    img{
+        height:115rem;
+        width:100%;
+        object-fit:fill;
+      
+        
+    }
+}
 
 //NEWSーーーーーーーーーーーーーーーーーーーーーーーーーー
 .news-wrap {
@@ -303,6 +317,21 @@ header {
         transform:scale(1.2,1.2);
     }
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+    .middle-backimg{
+        position: absolute;
+        z-index: -100;
+        width:100%;
+        margin-top:-85rem;
+        img{
+            height:90rem;
+            width:100%;
+            object-fit:fill;
+           
+          
+            
+        }
+    }
+    
 
 
 // Q＆Aーーーーーーーーーーーーーーーーーーーーーーーー
@@ -496,6 +525,9 @@ label[for="message"] {
 }
 
 // footerーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+footer{
+    width:100%;
+}
 .footer{
     width:120rem;
     margin-left:auto;
@@ -554,7 +586,6 @@ label[for="message"] {
     }
 }
 .footer__back{
-    display:grid;
     position:absolute;
     z-index: -1;
     width:100%;
@@ -563,7 +594,7 @@ label[for="message"] {
     img{
         height:80rem;
         width:100%;
-        object-fit:cover;
+        object-fit:fill;
         
     }
 }
