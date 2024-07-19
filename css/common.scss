@@ -20,3 +20,34 @@ $font-tsuku-r : "fot-tsukuardgothic-std", sans-serif;
 $font-tsuku-b : "fot-tsukuardgothic-std", sans-serif;
 // font-weight: 700;
 // font-style: normal;
+
+
+// レシポンシブーーーーーーーーーーーーーーーーーーー
+$tab: 959px;
+@mixin tab {
+    @media screen and (max-width: $tab) {
+        @content;
+    }
+}
+$sp: 600px;
+@mixin sp {
+    @media screen and (max-width: $sp) {
+        @content;
+    }
+}
+$pc: 960px;
+@mixin pc {
+    @media screen and (min-width: $pc) {
+        @content;
+    }
+}
+$small-pc:1250px;
+@mixin small-pc {
+    @media screen and (max-width: $small-pc){
+        @content;
+    }
+}
+// 例
+// @include sp {
+//     margin-bottom: 5rem;
+// }
