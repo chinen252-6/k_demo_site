@@ -5,16 +5,28 @@ html {
     font-size: 62.5%;
     background-color: $gray;
     margin-top: 0;
+    @include small-pc {
+        font-size:59%;
+        
+    }
 }
 .main-backimg {
-    background-image: url("../image/fffvbackground_image.png");
+    background-image: url("../image/background1_image.png");
     background-size: cover; //1500以下でconteinへ
     padding-bottom: 7rem;
     position: relative;
+    @include small-pc {
+        background-size: contain;
+        height:85rem;
+    }
 }
 
 header {
     height: 25rem;
+    @include small-pc {
+        height:auto;
+    }
+  
 }
 .header__top {
     width: 85%;
@@ -37,6 +49,9 @@ header {
     margin-top: auto;
     margin-bottom: auto;
     padding-left: 3rem;
+    @include small-pc {
+        padding-left:2rem;
+    }
     &__text {
         font-size: 4rem;
         margin-right: 5rem;
@@ -46,6 +61,10 @@ header {
         margin-top: auto;
         margin-bottom: auto;
         white-space: nowrap;
+        @include small-pc {
+            font-size:3rem;
+            margin-right:3rem;
+        }
     }
 }
 .header__top__list {
@@ -72,15 +91,19 @@ header {
             text-align: center;
         }
         .jp {
-            font-size: 2.4rem;
             color: $black;
             font-size: 2.4rem;
+            @include small-pc {
+                font-size:1.9rem;
+            }
             padding-bottom: 0.9rem;
         }
         .en {
             font-size: 1.8rem;
+            @include small-pc {
+                font-size:1.6rem;
+            }
             color: $red;
-            font-size: 1.8rem;
         }
     }
 }
@@ -91,13 +114,21 @@ header {
     width: 85%;
     margin-right: auto;
     margin-left: auto;
+    @include small-pc {
+        padding-top:25rem;
+    }
+    
 
     &__text {
         padding-bottom: 60rem;
         padding-top: 15rem;
     }
     &__img {
-        margin-right: 100%;
+        // margin-right: 100%;
+        @include small-pc {
+            padding-right:5rem;
+            width:18rem;
+        }
     }
 }
 // ------------------------------------------------------
@@ -106,12 +137,18 @@ header {
     z-index: -100;
     width:100%;
     margin-top:-25rem;
+    @include small-pc {
+        margin-top:-55rem;
+    }
     img{
         height:115rem;
         width:100%;
         object-fit:fill;
+        @include small-pc {
+            height:140rem;
+        }
       
-        
+    
     }
 }
 
@@ -122,6 +159,9 @@ header {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 12rem;
+    @include small-pc {
+        margin-top:4rem;
+    }
     a {
         text-decoration: none;
     }
@@ -159,11 +199,15 @@ header {
             display: block;
             text-align: right;
         }
+        
         &__imgbottom img {
             padding-bottom: 9rem;
             width: 93rem;
         }
     }
+}
+.news-wrap__flex__more:hover{
+    transform:scale(1.1);
 }
 //About usーーーーーーーーーーーーーーーーーーーーーーーーーー
 .about-wrap {
@@ -257,6 +301,9 @@ header {
     justify-content: flex-end;
     padding-top: 3rem;
 }
+.product-wrap__flex__right__show:hover{
+transform:scale(1.1);
+}
 // ラインアップーーーーーーーーーーーーーーーーーーーーーーーーーー
 .slider {
     overflow: hidden;
@@ -287,6 +334,9 @@ header {
     margin-left: auto;
     padding-top: 5rem;
     padding-bottom: 7rem;
+}
+.slider__bottom:hover{
+transform:scale(1.1);
 }
 // スライド設定ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 @keyframes slider__track--left {
@@ -444,6 +494,9 @@ header {
     background-color: $white;
     border-radius: 70px;
     padding-bottom:18rem;
+    @include small-pc {
+        width:95rem;
+    }
 }
 .contact__title {
     display: flex;
@@ -538,6 +591,9 @@ footer{
     font-family:$font-tsuku-b;
     font-weight: 700;
     position:relative;
+    @include small-pc {
+        width:100rem;
+    }
 
     &__logo{
         padding-right:2.5rem;
@@ -573,6 +629,9 @@ footer{
 }
 .list__top{
     padding-right:6rem;
+    @include small-pc {
+        padding-right:5rem;
+    }
 }
 .footer__copy{
     padding-top:3.6rem;

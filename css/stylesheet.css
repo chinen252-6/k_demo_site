@@ -4,16 +4,32 @@ html {
   background-color: #F3F3F2;
   margin-top: 0;
 }
+@media screen and (max-width: 1250px) {
+  html {
+    font-size: 59%;
+  }
+}
 
 .main-backimg {
-  background-image: url("../image/fffvbackground_image.png");
+  background-image: url("../image/background1_image.png");
   background-size: cover;
   padding-bottom: 7rem;
   position: relative;
 }
+@media screen and (max-width: 1250px) {
+  .main-backimg {
+    background-size: contain;
+    height: 85rem;
+  }
+}
 
 header {
   height: 25rem;
+}
+@media screen and (max-width: 1250px) {
+  header {
+    height: auto;
+  }
 }
 
 .header__top {
@@ -39,6 +55,11 @@ header {
   margin-bottom: auto;
   padding-left: 3rem;
 }
+@media screen and (max-width: 1250px) {
+  .header__top__logo {
+    padding-left: 2rem;
+  }
+}
 .header__top__logo__text {
   font-size: 4rem;
   margin-right: 5rem;
@@ -48,6 +69,12 @@ header {
   margin-top: auto;
   margin-bottom: auto;
   white-space: nowrap;
+}
+@media screen and (max-width: 1250px) {
+  .header__top__logo__text {
+    font-size: 3rem;
+    margin-right: 3rem;
+  }
 }
 
 .header__top__list {
@@ -75,15 +102,23 @@ header {
   text-align: center;
 }
 .header__top__list ul .jp {
-  font-size: 2.4rem;
   color: #433D3C;
   font-size: 2.4rem;
   padding-bottom: 0.9rem;
 }
+@media screen and (max-width: 1250px) {
+  .header__top__list ul .jp {
+    font-size: 1.9rem;
+  }
+}
 .header__top__list ul .en {
   font-size: 1.8rem;
   color: #D9333F;
-  font-size: 1.8rem;
+}
+@media screen and (max-width: 1250px) {
+  .header__top__list ul .en {
+    font-size: 1.6rem;
+  }
 }
 
 .top-heading {
@@ -93,12 +128,20 @@ header {
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (max-width: 1250px) {
+  .top-heading {
+    padding-top: 25rem;
+  }
+}
 .top-heading__text {
   padding-bottom: 60rem;
   padding-top: 15rem;
 }
-.top-heading__img {
-  margin-right: 100%;
+@media screen and (max-width: 1250px) {
+  .top-heading__img {
+    padding-right: 5rem;
+    width: 18rem;
+  }
 }
 
 .top-backimg {
@@ -107,11 +150,21 @@ header {
   width: 100%;
   margin-top: -25rem;
 }
+@media screen and (max-width: 1250px) {
+  .top-backimg {
+    margin-top: -55rem;
+  }
+}
 .top-backimg img {
   height: 115rem;
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+}
+@media screen and (max-width: 1250px) {
+  .top-backimg img {
+    height: 140rem;
+  }
 }
 
 .news-wrap {
@@ -120,6 +173,11 @@ header {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 12rem;
+}
+@media screen and (max-width: 1250px) {
+  .news-wrap {
+    margin-top: 4rem;
+  }
 }
 .news-wrap a {
   text-decoration: none;
@@ -161,6 +219,10 @@ header {
 .news-wrap__flex__imgbottom img {
   padding-bottom: 9rem;
   width: 93rem;
+}
+
+.news-wrap__flex__more:hover {
+  transform: scale(1.1);
 }
 
 .about-wrap {
@@ -248,6 +310,10 @@ header {
   padding-top: 3rem;
 }
 
+.product-wrap__flex__right__show:hover {
+  transform: scale(1.1);
+}
+
 .slider {
   overflow: hidden;
   margin: 0 auto;
@@ -277,6 +343,10 @@ header {
   margin-left: auto;
   padding-top: 5rem;
   padding-bottom: 7rem;
+}
+
+.slider__bottom:hover {
+  transform: scale(1.1);
 }
 
 @keyframes slider__track--left {
@@ -429,6 +499,11 @@ header {
   border-radius: 70px;
   padding-bottom: 18rem;
 }
+@media screen and (max-width: 1250px) {
+  .contact {
+    width: 95rem;
+  }
+}
 
 .contact__title {
   display: flex;
@@ -524,6 +599,11 @@ footer {
   font-weight: 700;
   position: relative;
 }
+@media screen and (max-width: 1250px) {
+  .footer {
+    width: 100rem;
+  }
+}
 .footer__logo {
   padding-right: 2.5rem;
 }
@@ -553,6 +633,11 @@ footer {
 
 .list__top {
   padding-right: 6rem;
+}
+@media screen and (max-width: 1250px) {
+  .list__top {
+    padding-right: 5rem;
+  }
 }
 
 .footer__copy {
