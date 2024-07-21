@@ -1,14 +1,25 @@
 @charset "UTF-8";
 @import "common";
-
+.sp{
+    display:none;
+}
+.tab{
+    display:none;
+    @include tab{
+        display:block;
+    }
+}
 html {
     font-size: 62.5%;
     background-color: $gray;
     margin-top: 0;
     @include small-pc {
         font-size:59%;
-        
     }
+    @include tab {
+        font-size:55%;
+    }
+   
 }
 .main-backimg {
     background-image: url("../image/background1_image.png");
@@ -19,12 +30,22 @@ html {
         background-size: contain;
         height:85rem;
     }
+    @include tab {
+        height:75rem;
+        
+        
+    }
+
+    
 }
 
 header {
     height: 25rem;
     @include small-pc {
         height:auto;
+    }
+    @include tab {
+        display:none;
     }
   
 }
@@ -117,11 +138,18 @@ header {
     @include small-pc {
         padding-top:25rem;
     }
+   
     
 
     &__text {
         padding-bottom: 60rem;
         padding-top: 15rem;
+        @include tab {
+            width:50rem;
+            margin-top:-35rem;
+            margin-left:auto;
+            margin-right:auto;
+        }
     }
     &__img {
         // margin-right: 100%;
@@ -129,9 +157,27 @@ header {
             padding-right:5rem;
             width:18rem;
         }
+        @include tab {
+            display:none;
+        }
     }
 }
-// ------------------------------------------------------
+// tab以下------------------------------------------------------
+.header__flex{
+    display:flex;
+    &__right{
+        margin-left:auto;
+        padding-top:2rem;
+        padding-right:2rem;
+        display:flex;
+        flex-flow: column;
+    }
+}
+
+
+
+
+// --------------------------------------------------------------------
 .top-backimg{
     position: absolute;
     z-index: -100;
@@ -145,7 +191,7 @@ header {
         width:100%;
         object-fit:fill;
         @include small-pc {
-            height:140rem;
+            height:150rem;
         }
       
     
@@ -162,17 +208,26 @@ header {
     @include small-pc {
         margin-top:4rem;
     }
+    @include tab {
+        width:90%;
+        
+    }
     a {
         text-decoration: none;
     }
 
     &__imgtop {
         padding-bottom: 3rem;
+
+        
     }
     &__flex {
         display: flex;
         padding-bottom: 2rem;
         width: 93rem;
+        @include small-pc {
+            width:90%;
+        }
         &__sideimg {
             padding-right: 4rem;
         }
@@ -200,10 +255,22 @@ header {
             text-align: right;
         }
         
-        &__imgbottom img {
-            padding-bottom: 9rem;
-            width: 93rem;
+       
+    }
+    &__imgbottom__bottom {
+        padding-bottom: 9rem;
+        
+        @include tab {
+            width:95%;
         }
+    }
+}
+.news-wrap__imgtop img{
+    
+    @include tab {
+        width:95%;
+        // display:none;
+    
     }
 }
 .news-wrap__flex__more:hover{
@@ -212,12 +279,18 @@ header {
 //About usーーーーーーーーーーーーーーーーーーーーーーーーーー
 .about-wrap {
     width: 99rem;
+    @include small-pc {
+        width:90%;
+    }
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 7rem;
 
     &__img {
         padding-bottom: 6.5rem;
+        @include tab{
+            text-align: center;
+        }
     }
 }
 .about-wrap__flexone {
@@ -226,13 +299,34 @@ header {
     margin-left: auto;
     display: flex;
     padding-bottom: 5rem;
+    @include small-pc {
+        width:90%;
+        margin-left:0;
+    }
+    @include tab{
+        display:block;
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
 
     &__img {
         padding-left: 4rem;
+        @include tab {
+            padding-left:0;
+        }
     }
 
     &__text {
         width: 40rem;
+      
+        @include tab {
+            width:70%;
+            margin-left:auto;
+            margin-right:auto;
+            padding-bottom:2rem;
+        }
+        
         img {
             width: 40rem;
         }
@@ -247,6 +341,16 @@ header {
 
 .about-wrap__flexsec {
     width: 91rem;
+    @include small-pc {
+        width:90%;
+    }
+    @include tab{
+        display:block;
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
     margin-left: 0;
     margin-left: auto;
     display: flex;
@@ -254,9 +358,18 @@ header {
 
     &__img {
         padding-right: 4.5rem;
+        @include tab {
+            padding-right:0;
+        }
     }
     &__text {
         width: 40rem;
+        @include tab {
+            width:70%;
+            margin-left:auto;
+            margin-right:auto;
+            padding-bottom:2rem;
+        }
         img {
             width: 37rem;
         }
@@ -272,18 +385,32 @@ header {
 //Productsーーーーーーーーーーーーーーーーーーーーーーーーーー
 .product-wrap {
     width: 99rem;
+    @include small-pc {
+        width:90%;
+    }
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 6.7rem;
     &__img {
         padding-bottom: 5.6rem;
+        @include tab {
+            text-align: center;
+            padding-bottom:2rem;
+            padding-top:3rem;
+        }
     }
     &__flex {
         display: flex;
+        @include tab {
+            display:flex;
+            flex-direction: column-reverse;
+            text-align: center;
+        }
         &__img {
             padding-right: 3rem;
         }
         &__right {
+           
             &__text {
                 padding-left: 11.3rem;
                 font-family: $font-tsuku-b;
@@ -291,6 +418,14 @@ header {
                 font-style: normal;
                 font-size: 2rem;
                 color: $black;
+                @include tab {
+                    width:75%;
+                    text-align: left;
+                    margin-left:auto;
+                    margin-right:auto;
+                    padding-left:0;
+                    padding-bottom:2rem;
+                }
             }
         }
     }
@@ -300,6 +435,17 @@ header {
     align-items: flex-end;
     justify-content: flex-end;
     padding-top: 3rem;
+    @include tab {
+        display:none;
+    }
+}
+@include tab {
+    .product-show{
+        text-align: right;
+     }
+    .product-show:hover{
+    transform:scale(1.1);
+}
 }
 .product-wrap__flex__right__show:hover{
 transform:scale(1.1);
@@ -311,6 +457,9 @@ transform:scale(1.1);
 }
 .slider__top {
     width: 99rem;
+    @include small-pc {
+        width:90%;
+    }
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 4rem;
@@ -329,6 +478,9 @@ transform:scale(1.1);
 }
 .slider__bottom {
     width: 99rem;
+    @include small-pc {
+        width:90%;
+    }
     text-align: right;
     margin-right: auto;
     margin-left: auto;
@@ -389,6 +541,9 @@ transform:scale(1.1);
 .question {
     &__title {
         width: 99rem;
+        @include small-pc {
+            width:90%;
+        }
         margin-left: auto;
         margin-right: auto;
     }
@@ -397,17 +552,30 @@ transform:scale(1.1);
 .question__accordion-area {
     list-style: none;
     width: 99rem;
+    @include small-pc {
+        width:90%;
+    }
     margin: 0 auto;
     &__flex {
         display: flex;
-        background-image: url("../image/Rectangle.png");
-        background-size: contain;
+        background-color: $white;
+        border-radius: 8rem;
         width: 90rem;
+        @include small-pc {
+            width:90%;
+        }
         margin: 0 3% 3% 3%;
         padding: 5% 0 5% 4%;
 
         img {
             padding-right: 2rem;
+            height:4rem;
+            @include tab{
+                padding-right:3rem;
+                padding-left:3rem;
+                margin-top:auto;
+                margin-bottom:auto;
+            }
         }
     }
 }
@@ -472,19 +640,41 @@ transform:scale(1.1);
     display: none;
     display: flex;
     width: 80rem;
+    
     background-image: url("../image/answer.png");
     background-size: cover;
     margin: 0 0 3% 3%;
     padding: 4.5% 0 4.5% 4%;
     font-size: 2rem;
+    @include small-pc {
+        width:90%;
+        
+    }
+    @include tab{
+        background-image:none;
+        background-color: #FFFEED;
+        border-radius: 8rem;
+       
+    }
+    
     img {
         padding-right: 2rem;
+        height:4rem;
+            @include tab{
+                padding-right:3rem;
+                padding-left:3rem;
+                margin-top:auto;
+                margin-bottom:auto;
+            }
     }
 }
 
 // コンタクトフォームーーーーーーーーーーーーーーーーーーーーーーーー
 .contact {
     width: 110rem;
+    @include small-pc {
+        width:90%;
+    }
     margin-top: 12rem;
     margin-left: auto;
     margin-right: auto;
@@ -497,10 +687,16 @@ transform:scale(1.1);
     @include small-pc {
         width:95rem;
     }
+    @include tab {
+        width:90%;
+    }
 }
 .contact__title {
     display: flex;
     font-size: 2rem;
+    @include tab{
+        display:block;
+    }
     img{
         height:12.6rem;
     }
@@ -523,12 +719,22 @@ transform:scale(1.1);
         color: $black;
         font-size: 2.2rem;
         padding-bottom: 3rem;
+        @include tab {
+            display:flex;
+            flex-direction: column;
+        }
 
         .required {
             color: $red;
         }
         .privacy-policy {
             color: $red;
+            
+        }
+    }
+    &__group-privacy {
+        @include tab{
+            display:block;
         }
     }
     &__group-botton {
@@ -550,6 +756,9 @@ label[for="tel"],
 label[for="message"] {
     display: inline-block;
     width: 30%;
+    @include tab {
+        width:50%;
+    }
 }
 label[for="message"] {
     vertical-align: top;
@@ -564,10 +773,17 @@ label[for="message"] {
 }
 .contact__form__group-short input {
     width: 33%;
+    @include tab {
+        width:90%;
+    }
 }
 .contact__form__group input,
 .contact__form__group textarea {
     width: 60%;
+    @include tab {
+        width:90%;
+    }
+
 }
 
 .contact__form__group input:focus,
@@ -583,6 +799,9 @@ footer{
 }
 .footer{
     width:120rem;
+    @include small-pc {
+        width:90%;
+    }
     margin-left:auto;
     margin-right:auto;
     padding-top:15rem;
@@ -593,6 +812,9 @@ footer{
     position:relative;
     @include small-pc {
         width:100rem;
+    }
+    @include tab {
+        width:90%;
     }
 
     &__logo{
