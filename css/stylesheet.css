@@ -82,6 +82,7 @@ header {
   margin-top: auto;
   margin-bottom: auto;
   padding-left: 3rem;
+  z-index: 100;
 }
 @media screen and (max-width: 1250px) {
   .header__top__logo {
@@ -196,6 +197,66 @@ header {
   flex-flow: column;
 }
 
+.header__flex__right__humb__list {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 75%;
+  background-color: #F3F3F2; /* 背景色を指定 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  transition: right 0.3s ease;
+  padding-top: 10rem;
+  padding-left: 10rem;
+}
+.header__flex__right__humb__list a {
+  text-decoration: none;
+}
+.header__flex__right__humb__list li {
+  font-family: "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2F5D50;
+  list-style: none;
+  border-bottom: 3px dotted #2F5D50;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  width: 21rem;
+  text-align: left;
+}
+
+.header__flex__right__humb__list.active {
+  right: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.tab-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 959px) {
+  .tab-logo {
+    display: block;
+  }
+}
+
+.header__flex__right__humb__list.active .close-button {
+  display: block;
+}
+
 .top-backimg {
   position: absolute;
   z-index: -100;
@@ -234,6 +295,17 @@ header {
 @media screen and (max-width: 959px) {
   .news-wrap {
     width: 90%;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .news-wrap {
+    margin-top: -10rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .news-wrap {
+    margin-top: -20rem;
   }
 }
 .news-wrap a {
@@ -865,6 +937,12 @@ label[for=message] {
 footer {
   width: 100%;
 }
+@media screen and (max-width: 959px) {
+  footer {
+    background-color: #2F5D50;
+    margin-top: 3rem;
+  }
+}
 
 .footer {
   width: 120rem;
@@ -890,13 +968,33 @@ footer {
 @media screen and (max-width: 959px) {
   .footer {
     width: 90%;
+    flex-direction: column;
   }
 }
 .footer__logo {
   padding-right: 2.5rem;
 }
+@media screen and (max-width: 959px) {
+  .footer__logo {
+    display: none;
+  }
+}
+.footer__toplogo {
+  text-align: center;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  left: 0;
+}
 .footer__address {
   font-size: 2rem;
+}
+@media screen and (max-width: 959px) {
+  .footer__address {
+    text-align: left;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 .footer__address__tel {
   padding-top: 6rem;
@@ -906,8 +1004,21 @@ footer {
   margin-left: auto;
   padding-top: 4rem;
 }
+@media screen and (max-width: 959px) {
+  .footer__menu {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+}
 .footer__menu__list {
   display: flex;
+}
+@media screen and (max-width: 959px) {
+  .footer__menu__list {
+    width: 90%;
+    flex-direction: column;
+  }
 }
 .footer__menu__list a {
   text-decoration: none;
@@ -925,6 +1036,36 @@ footer {
 @media screen and (max-width: 1250px) {
   .list__top {
     padding-right: 5rem;
+  }
+}
+@media screen and (max-width: 959px) {
+  .list__top li {
+    border-bottom: 3px dotted #FDFDFD;
+    width: 24rem;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .list__bottom li {
+    border-bottom: 3px dotted #FDFDFD;
+    width: 24rem;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .list__bottom__privacy {
+    padding-top: 6rem;
+    border: none !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .list__bottom__law {
+    border: none !important;
   }
 }
 

@@ -55,9 +55,25 @@
             <img src="image/sp/header-logo.png" alt="">
         </div>
         <div class="header__flex__right">
-            <a href=""><img src="image/sp/header-humb_menu.png" alt=""></a>
-            <a href=""><img src="image/sp/header-cta.png" alt=""></a>
+            <div class="header__flex__right__humb" id="menuButton">
+                <img src="image/sp/header-humb_menu.png" alt="">
+            </div>
+            <ul class="header__flex__right__humb__list" id="menu">
+                <a href=""><li>トップ</li></a>
+                <a href=""><li>しゃべる農園</li></a>
+                <a href=""><li>商品</li></a>
+                <a href=""><li>よくある質問</li></a>
+                <a href=""><li>お問い合わせ</li></a>
+                <a href=""><li>ご予約</li></a>
+                <img src="image/sp/close_btn.png" alt="" id="closeButton" class="close-button">
+                
+                <img src="image/sp/header-logo.png" alt="" class="tab-logo">
+                
+            </ul>
+            <a class="header__flex__right__reserve" href=""><img src="image/sp/header-cta.png" alt=""></a>
+            
         </div>
+        
     </div>
 </header>
 <!-- ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー -->
@@ -365,6 +381,9 @@
             <div class="footer__logo">
                 <img src="image/logofooter_logo.png" alt="">
             </div>
+            <div class="tab footer__toplogo">
+                <img src="image/sp/footer_logo.png" alt="">
+            </div>
             <div class="footer__address">
                 <p class="footer__address__nomber">〒123-4567</p>
                 <p class="footer__address__text">東京都〇〇区〇〇丁目〇〇</p>
@@ -406,5 +425,6 @@
 
 
 </body>
+    <script src="/js/header-list.js"></script>
     <script src="/js/accordion.js"></script>
 </html>
