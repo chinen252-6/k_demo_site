@@ -2,6 +2,11 @@
 .sp {
   display: none;
 }
+@media screen and (max-width: 600px) {
+  .sp {
+    display: block;
+  }
+}
 
 .tab {
   display: none;
@@ -43,6 +48,11 @@ html {
 @media screen and (max-width: 959px) {
   .main-backimg {
     height: 75rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-backimg {
+    background-image: none;
   }
 }
 
@@ -162,6 +172,11 @@ header {
     padding-top: 25rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .top-heading {
+    display: none;
+  }
+}
 .top-heading__text {
   padding-bottom: 60rem;
   padding-top: 15rem;
@@ -188,6 +203,7 @@ header {
 
 .header__flex {
   display: flex;
+  position: relative;
 }
 .header__flex__right {
   margin-left: auto;
@@ -198,12 +214,11 @@ header {
 }
 
 .header__flex__right__humb__list {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: -100%;
   width: 100%;
-  height: 75%;
-  background-color: #F3F3F2; /* 背景色を指定 */
+  background-color: #F3F3F2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,6 +226,7 @@ header {
   transition: right 0.3s ease;
   padding-top: 10rem;
   padding-left: 10rem;
+  z-index: 10;
 }
 .header__flex__right__humb__list a {
   text-decoration: none;
@@ -226,6 +242,10 @@ header {
   margin-bottom: 2rem;
   width: 21rem;
   text-align: left;
+}
+
+#list-top {
+  padding-top: 60px;
 }
 
 .header__flex__right__humb__list.active {
@@ -255,6 +275,28 @@ header {
 
 .header__flex__right__humb__list.active .close-button {
   display: block;
+}
+
+.sp header {
+  position: relative;
+}
+
+.header__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  position: relative;
+  margin-top: -300px;
+  z-index: -10;
+}
+
+.header__text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .top-backimg {
@@ -308,11 +350,31 @@ header {
     margin-top: -20rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .news-wrap {
+    margin-top: 7.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .news-wrap {
+    margin-top: -9rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .news-wrap {
+    margin-top: -20rem;
+  }
+}
 .news-wrap a {
   text-decoration: none;
 }
 .news-wrap__imgtop {
   padding-bottom: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .news-wrap__imgtop__top {
+    display: none;
+  }
 }
 .news-wrap__flex {
   display: flex;
@@ -324,13 +386,45 @@ header {
     width: 90%;
   }
 }
+@media screen and (max-width: 600px) {
+  .news-wrap__flex {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .news-wrap__flex__sideimg {
   padding-right: 4rem;
+}
+@media screen and (max-width: 600px) {
+  .news-wrap__flex__sideimg {
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .news-wrap__flex__sideimg .news-wrap__flex__sideimg__stb {
+    width: 310px;
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 .news-wrap__flex__list {
   font-family: "fot-tsukuardgothic-std", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+@media screen and (max-width: 600px) {
+  .news-wrap__flex__list {
+    width: 310px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #DDDDDD;
+  }
 }
 .news-wrap__flex__list__date {
   font-size: 1.8rem;
@@ -350,12 +444,40 @@ header {
   display: block;
   text-align: right;
 }
+@media screen and (max-width: 600px) {
+  .news-wrap__imgbottom {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .news-wrap__imgbottom__bottom {
   padding-bottom: 9rem;
 }
 @media screen and (max-width: 959px) {
   .news-wrap__imgbottom__bottom {
     width: 95%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .news-wrap__imgbottom__bottom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news-under {
+    width: 315px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #news-spdlete {
+    display: none;
   }
 }
 
@@ -388,6 +510,16 @@ header {
     text-align: center;
   }
 }
+@media screen and (max-width: 600px) {
+  .about-wrap__img__logo {
+    display: none;
+  }
+}
+
+.about-smalllogo {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .about-wrap__flexone {
   width: 91rem;
@@ -405,7 +537,6 @@ header {
 @media screen and (max-width: 959px) {
   .about-wrap__flexone {
     display: block;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
@@ -416,6 +547,9 @@ header {
 @media screen and (max-width: 959px) {
   .about-wrap__flexone__img {
     padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 .about-wrap__flexone__text {
@@ -429,8 +563,18 @@ header {
     padding-bottom: 2rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .about-wrap__flexone__text {
+    width: 300px;
+  }
+}
 .about-wrap__flexone__text img {
   width: 40rem;
+}
+@media screen and (max-width: 600px) {
+  .about-wrap__flexone__text img {
+    width: 300px;
+  }
 }
 .about-wrap__flexone__text__text {
   font-family: "fot-tsukuardgothic-std", sans-serif;
@@ -438,6 +582,15 @@ header {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 600px) {
+  .about-wrap__flexone__img__pc {
+    display: none;
+  }
+  .flexone__image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .about-wrap__flexsec {
   width: 91rem;
   margin-left: 0;
@@ -453,7 +606,6 @@ header {
 @media screen and (max-width: 959px) {
   .about-wrap__flexsec {
     display: block;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
@@ -464,6 +616,7 @@ header {
 @media screen and (max-width: 959px) {
   .about-wrap__flexsec__img {
     padding-right: 0;
+    text-align: center;
   }
 }
 .about-wrap__flexsec__text {
@@ -477,8 +630,18 @@ header {
     padding-bottom: 2rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .about-wrap__flexsec__text {
+    width: 300px;
+  }
+}
 .about-wrap__flexsec__text img {
   width: 37rem;
+}
+@media screen and (max-width: 600px) {
+  .about-wrap__flexsec__text img {
+    width: 300px;
+  }
 }
 .about-wrap__flexsec__text__text {
   font-family: "fot-tsukuardgothic-std", sans-serif;
@@ -486,6 +649,15 @@ header {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 600px) {
+  .about-wrap__flexsec__img__pc {
+    display: none;
+  }
+  .flexsec__image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .product-wrap {
   width: 99rem;
   margin-left: auto;
@@ -507,6 +679,11 @@ header {
     padding-top: 3rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .product-wrap__img__logo {
+    display: none;
+  }
+}
 .product-wrap__flex {
   display: flex;
 }
@@ -519,6 +696,16 @@ header {
 }
 .product-wrap__flex__img {
   padding-right: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .product-wrap__flex__img img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .product-wrap__flex__right__logo {
+    width: 310px;
+  }
 }
 .product-wrap__flex__right__text {
   padding-left: 11.3rem;
@@ -536,6 +723,14 @@ header {
     margin-right: auto;
     padding-left: 0;
     padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .producut-logo {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 
@@ -588,6 +783,11 @@ header {
 .slider__track__item {
   width: 100%;
   padding-right: 5rem;
+}
+@media screen and (max-width: 600px) {
+  .slider__track__item img {
+    width: 300px;
+  }
 }
 
 .slider__bottom {
@@ -662,6 +862,16 @@ header {
     width: 90%;
   }
 }
+@media screen and (max-width: 600px) {
+  .question__title__logo {
+    display: none;
+  }
+}
+
+.question__image-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .question__accordion-area {
   list-style: none;
@@ -686,6 +896,11 @@ header {
     width: 90%;
   }
 }
+@media screen and (max-width: 600px) {
+  .question__accordion-area__flex {
+    border-radius: 35px;
+  }
+}
 .question__accordion-area__flex img {
   padding-right: 2rem;
   height: 4rem;
@@ -696,6 +911,17 @@ header {
     padding-left: 3rem;
     margin-top: auto;
     margin-bottom: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .question__accordion-area__flex img {
+    padding: 0 5px 20px 10px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .question__accordion-area__flex__title {
+    width: 70%;
   }
 }
 
@@ -755,6 +981,11 @@ header {
   font-family: "fot-tsukuardgothic-std", sans-serif;
   font-weight: 700;
 }
+@media screen and (max-width: 600px) {
+  .question__accordion-area__bottom {
+    flex-direction: column;
+  }
+}
 
 .question__accordion-area__bottom__box {
   display: none;
@@ -778,6 +1009,11 @@ header {
     border-radius: 8rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .question__accordion-area__bottom__box {
+    border-radius: 35px;
+  }
+}
 .question__accordion-area__bottom__box img {
   padding-right: 2rem;
   height: 4rem;
@@ -790,7 +1026,26 @@ header {
     margin-bottom: auto;
   }
 }
+@media screen and (max-width: 600px) {
+  .question__accordion-area__bottom__box img {
+    padding: 0 5px 20px 10px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .question__accordion-area__bottom__box__text {
+    width: 85%;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .pc-berry-img {
+    display: none;
+  }
+  .small-berry {
+    margin-top: -40px;
+  }
+}
 .contact {
   width: 110rem;
   margin-top: 12rem;
@@ -834,6 +1089,12 @@ header {
 .contact__title p {
   padding-left: 3rem;
   color: #433D3C;
+}
+
+@media screen and (max-width: 600px) {
+  .contact__title__logo {
+    display: none;
+  }
 }
 
 .contact__form__caution {
@@ -891,6 +1152,15 @@ label[for=message] {
   label[for=tel],
   label[for=message] {
     width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  label[for=name],
+  label[for=ruby],
+  label[for=email],
+  label[for=tel],
+  label[for=message] {
+    width: 70%;
   }
 }
 
