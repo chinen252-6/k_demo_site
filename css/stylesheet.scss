@@ -2,6 +2,9 @@
 @import "common";
 .sp{
     display:none;
+    @include sp{
+        display:block;
+    }
 }
 .tab{
     display:none;
@@ -32,6 +35,9 @@ html {
     }
     @include tab {
         height:75rem;
+    }
+    @include sp {
+        background-image: none;
     }
    
     
@@ -138,6 +144,9 @@ header {
     @include small-pc {
         padding-top:25rem;
     }
+    @include sp {
+        display:none;
+    }
    
     
 
@@ -165,22 +174,26 @@ header {
 // tab以下------------------------------------------------------
 .header__flex{
     display:flex;
+    position:relative;
+    
     &__right{
         margin-left:auto;
         padding-top:2rem;
         padding-right:2rem;
         display:flex;
         flex-flow: column;
+        
     }
 }
 
 .header__flex__right__humb__list {
-    position:fixed;
+    position:absolute;
     top: 0;
     right: -100%;
     width: 100%;
-    height: 75%;
-    background-color: $gray; /* 背景色を指定 */
+   
+    background-color: $gray;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,11 +201,14 @@ header {
     transition: right 0.3s ease;
     padding-top:10rem;
     padding-left:10rem;
+    z-index:10;
 
     
     a{
         text-decoration:none;
+
     }
+    
     li{
         font-family:$font-tsuku-b;
         font-weight: 700;
@@ -207,6 +223,9 @@ header {
         
     }
 
+}
+#list-top{
+    padding-top:60px;
 }
 
 .header__flex__right__humb__list.active {
@@ -238,6 +257,27 @@ header {
 
 
 // --------------------------------------------------------------------
+// sp---------------------------------------------------------------------------------
+.sp header{
+    position:relative;
+}
+.header__img img{
+    object-fit: cover;
+    width:100%;
+    position:relative;
+    margin-top:-300px;
+    z-index: -10;
+}
+.header__text{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+}
+// --------------------------------------------------
 .top-backimg{
     position: absolute;
     z-index: -100;
@@ -278,15 +318,29 @@ header {
     @media screen and (max-width: 680px) {
         margin-top:-20rem;
     }
+    @include sp {
+        margin-top:7.5rem;
+    }
+    @media screen and (max-width: 500px) {
+        margin-top:-9rem;
+    }
+    @media screen and (max-width: 420px) {
+        margin-top:-20rem;
+    }
     a {
         text-decoration: none;
     }
 
     &__imgtop {
         padding-bottom: 3rem;
-
+        &__top{
+        @include sp {
+            display:none;
+            }
+        }
         
     }
+   
     &__flex {
         display: flex;
         padding-bottom: 2rem;
@@ -294,13 +348,42 @@ header {
         @include small-pc {
             width:90%;
         }
+        @include sp {
+            display:flex;
+            flex-direction: column;
+            margin-left:auto;
+            margin-right:auto;
+            
+        }
         &__sideimg {
             padding-right: 4rem;
+            @include sp {
+                padding-right:0;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .news-wrap__flex__sideimg__stb{
+                @include sp {
+                width:310px;
+                object-position: center;
+                }
+     
+            }
         }
         &__list {
             font-family: $font-tsuku-r;
             font-weight: 700;
             font-style: normal;
+            @include sp {
+                width:310px;
+                margin-right:auto;
+                margin-left: auto;
+                padding-bottom:30px;
+                margin-bottom:30px;
+                border-bottom:1px solid #DDDDDD;
+                
+            }
+
             &__date {
                 font-size: 1.8rem;
                 color: $green;
@@ -323,25 +406,52 @@ header {
         
        
     }
+    &__imgbottom{
+        @include sp{
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
     &__imgbottom__bottom {
         padding-bottom: 9rem;
         
         @include tab {
             width:95%;
         }
+        @include sp {
+            display:none;
+            
+        }
+    }
+    
+}
+
+.news-under{
+    @include sp {
+    width:315px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    object-position:center;
+    }
+}
+#news-spdlete{
+    @include sp{
+        display:none;
     }
 }
 .news-wrap__imgtop img{
     
     @include tab {
         width:95%;
-        // display:none;
+        
     
     }
 }
 .news-wrap__flex__more:hover{
     transform:scale(1.1);
 }
+
 //About usーーーーーーーーーーーーーーーーーーーーーーーーーー
 .about-wrap {
     width: 99rem;
@@ -357,7 +467,17 @@ header {
         @include tab{
             text-align: center;
         }
+        &__logo{
+            @include sp{
+                display:none;
+            }
+        }
+        
     }
+}
+.about-smalllogo{
+    margin-left:auto;
+    margin-right:auto;
 }
 .about-wrap__flexone {
     width: 91rem;
@@ -371,7 +491,6 @@ header {
     }
     @include tab{
         display:block;
-        text-align:center;
         margin-left:auto;
         margin-right:auto;
     }
@@ -380,6 +499,9 @@ header {
         padding-left: 4rem;
         @include tab {
             padding-left:0;
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
         }
     }
 
@@ -392,9 +514,15 @@ header {
             margin-right:auto;
             padding-bottom:2rem;
         }
+        @include sp {
+            width:300px;
+        }
         
         img {
             width: 40rem;
+            @include sp {
+                width:300px;
+            }
         }
 
         &__text {
@@ -402,6 +530,15 @@ header {
             font-weight: 700;
             font-size: 2rem;
         }
+    }
+}
+@include sp{
+    .about-wrap__flexone__img__pc{
+        display:none;
+    }
+    .flexone__image{
+        margin-left:auto;
+        margin-right:auto;
     }
 }
 
@@ -412,7 +549,6 @@ header {
     }
     @include tab{
         display:block;
-        text-align:center;
         margin-left:auto;
         margin-right:auto;
     }
@@ -421,11 +557,12 @@ header {
     margin-left: auto;
     display: flex;
     flex-direction: row-reverse;
-
+    
     &__img {
         padding-right: 4.5rem;
         @include tab {
             padding-right:0;
+            text-align: center;
         }
     }
     &__text {
@@ -436,8 +573,14 @@ header {
             margin-right:auto;
             padding-bottom:2rem;
         }
+        @include sp {
+            width:300px;
+        }
         img {
             width: 37rem;
+            @include sp{
+                width:300px;
+            }
         }
 
         &__text {
@@ -445,6 +588,15 @@ header {
             font-weight: 700;
             font-size: 2rem;
         }
+    }
+}
+@include sp{
+    .about-wrap__flexsec__img__pc{
+        display:none;
+    }
+    .flexsec__image{
+        margin-left:auto;
+        margin-right:auto;
     }
 }
 
@@ -464,6 +616,12 @@ header {
             padding-bottom:2rem;
             padding-top:3rem;
         }
+        &__logo{
+            @include sp {
+                display:none;
+            }
+        }
+        
     }
     &__flex {
         display: flex;
@@ -474,8 +632,18 @@ header {
         }
         &__img {
             padding-right: 3rem;
+            img{
+                @include sp{
+                width:300px;
+                }
+            }
         }
         &__right {
+            &__logo{
+                @include sp {
+                    width:310px;
+                }
+            }
            
             &__text {
                 padding-left: 11.3rem;
@@ -494,6 +662,13 @@ header {
                 }
             }
         }
+    }
+}
+.producut-logo{
+    @include sp{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
     }
 }
 .product-wrap__flex__right__show {
@@ -540,7 +715,11 @@ transform:scale(1.1);
 .slider__track__item {
     width: 100%;
     padding-right:5rem;
-   
+   img{
+        @include sp{
+        width:300px;
+        }
+       }
 }
 .slider__bottom {
     width: 99rem;
@@ -612,9 +791,17 @@ transform:scale(1.1);
         }
         margin-left: auto;
         margin-right: auto;
+        &__logo{
+            @include sp{
+                display:none;
+            }
+        }
     }
 }
-
+.question__image-logo{
+    margin-left:auto;
+    margin-right:auto;
+}
 .question__accordion-area {
     list-style: none;
     width: 99rem;
@@ -632,6 +819,9 @@ transform:scale(1.1);
         }
         margin: 0 3% 3% 3%;
         padding: 5% 0 5% 4%;
+        @include sp {
+            border-radius:35px;
+        }
 
         img {
             padding-right: 2rem;
@@ -641,6 +831,15 @@ transform:scale(1.1);
                 padding-left:3rem;
                 margin-top:auto;
                 margin-bottom:auto;
+            }
+            @include sp{
+                padding:0 5px 20px 10px;
+                margin-top:10px;
+            }
+        }
+        &__title{
+            @include tab {
+                width:70%;
             }
         }
     }
@@ -657,7 +856,6 @@ transform:scale(1.1);
     font-size: 2rem;
     font-family: $font-tsuku-b;
     font-weight: 700;
-
     transition: all 0.5s ease;
     color: $green;
 }
@@ -701,12 +899,14 @@ transform:scale(1.1);
     color: $red;
     font-family: $font-tsuku-b;
     font-weight: 700;
+    @include sp{
+        flex-direction: column;
+    }
 }
 .question__accordion-area__bottom__box {
     display: none;
     display: flex;
     width: 80rem;
-    
     background-image: url("../image/answer.png");
     background-size: cover;
     margin: 0 0 3% 3%;
@@ -720,7 +920,9 @@ transform:scale(1.1);
         background-image:none;
         background-color: #FFFEED;
         border-radius: 8rem;
-       
+    }
+    @include sp {
+        border-radius: 35px;
     }
     
     img {
@@ -732,8 +934,27 @@ transform:scale(1.1);
                 margin-top:auto;
                 margin-bottom:auto;
             }
+            @include sp{
+                padding:0 5px 20px 10px;
+                margin-top:10px;
+            }
+    }
+    &__text{
+        @include sp{
+            width:85%;
+        }
     }
 }
+@include sp{
+    .pc-berry-img{
+        display:none;
+    }
+    .small-berry{
+        margin-top:-40px;
+    }
+
+}
+
 
 // コンタクトフォームーーーーーーーーーーーーーーーーーーーーーーーー
 .contact {
@@ -765,10 +986,16 @@ transform:scale(1.1);
     }
     img{
         height:12.6rem;
+        
     }
     p {
         padding-left: 3rem;
         color: $black;
+    }
+}
+.contact__title__logo{
+    @include sp{
+        display:none;
     }
 }
 .contact__form {
@@ -824,6 +1051,9 @@ label[for="message"] {
     width: 30%;
     @include tab {
         width:50%;
+    }
+    @include sp{
+        width:70%;
     }
 }
 label[for="message"] {
