@@ -30,11 +30,12 @@ html {
     padding-bottom: 7rem;
     position: relative;
     @include small-pc {
-        background-size: contain;
+       
         height:85rem;
     }
     @include tab {
         height:75rem;
+        background-size: contain;
     }
     @include sp {
         background-image: none;
@@ -58,6 +59,7 @@ header {
     height: 13rem;
     background-color: $white;
     border-radius: 8rem;
+    box-shadow:0 4px 30px 0 #181818;
     position: absolute;
     top: 0;
     right: 0;
@@ -160,16 +162,33 @@ header {
             margin-right:auto;
         }
     }
-    &__img {
-        // margin-right: 100%;
+    a{
+        display:inline-block;
+        width:200px;
+        height:200px;
         @include small-pc {
-            padding-right:5rem;
-            width:18rem;
+           
+            width:123px;
+            height:123px;
         }
         @include tab {
             display:none;
         }
     }
+    a:hover{
+        opacity: 0.7;
+        transition: opacity 0.5s;
+    }
+    &__img {
+        
+        
+        @include small-pc {
+            padding-right:5rem;
+            width:18rem;
+        }
+        
+    }
+   
 }
 // tab以下------------------------------------------------------
 .header__flex{
@@ -327,8 +346,12 @@ header {
     @media screen and (max-width: 420px) {
         margin-top:-20rem;
     }
-    a {
+    .news-wrap__a {
         text-decoration: none;
+    }
+    .news-wrap__a:hover{
+        opacity:0.7;
+        transition: opacity 0.5s;
     }
 
     &__imgtop {
@@ -400,8 +423,8 @@ header {
         &__more {
             padding-top: 4rem;
             padding-bottom: 3rem;
-            display: block;
             text-align: right;
+         
         }
         
        
@@ -450,6 +473,8 @@ header {
 }
 .news-wrap__flex__more:hover{
     transform:scale(1.1);
+    transition: transform 0.5s;
+    
 }
 
 //About usーーーーーーーーーーーーーーーーーーーーーーーーーー
@@ -786,6 +811,7 @@ transform:scale(1.1);
 .question {
     &__title {
         width: 99rem;
+        padding-bottom:5rem;
         @include small-pc {
             width:90%;
         }
@@ -812,19 +838,19 @@ transform:scale(1.1);
     &__flex {
         display: flex;
         background-color: $white;
-        border-radius: 8rem;
+        border-radius: 5rem;
         width: 90rem;
         @include small-pc {
             width:90%;
         }
         margin: 0 3% 3% 3%;
-        padding: 5% 0 5% 4%;
+        padding: 5% 0 5% 5%;
         @include sp {
             border-radius:35px;
         }
 
         img {
-            padding-right: 2rem;
+            padding-right: 2.5rem;
             height:4rem;
             @include tab{
                 padding-right:3rem;
@@ -913,16 +939,17 @@ transform:scale(1.1);
     padding: 4.5% 0 4.5% 4%;
     font-size: 2rem;
     @include small-pc {
-        width:90%;
+        width:81%;
         
     }
     @include tab{
         background-image:none;
         background-color: #FFFEED;
-        border-radius: 8rem;
+        border-radius: 5rem;
     }
     @include sp {
         border-radius: 35px;
+        width:90%;
     }
     
     img {
@@ -983,14 +1010,34 @@ transform:scale(1.1);
     font-size: 2rem;
     @include tab{
         display:block;
+        width:70%;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+    @include sp{
+        width:90%;
     }
     img{
         height:12.6rem;
+        @include tab{
+           padding-bottom:2rem;
+           margin-left:auto;
+           margin-right:auto;
+        }
+        @include sp{
+            height:auto;
+        }
         
     }
     p {
         padding-left: 3rem;
         color: $black;
+         @include tab{
+            margin-left:auto;
+            margin-right:auto;
+            padding-left:0;
+        }
     }
 }
 .contact__title__logo{
@@ -1066,6 +1113,7 @@ label[for="message"] {
     padding: 0.5rem;
     border-radius: 1.5rem;
     box-sizing: border-box;
+    padding-left:20px;
 }
 .contact__form__group-short input {
     width: 33%;
