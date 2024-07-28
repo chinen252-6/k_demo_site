@@ -777,6 +777,7 @@ header {
 }
 .product-wrap__flex__right__show:hover {
   transform: scale(1.1);
+  transition: transform 0.5s;
 }
 
 .slider {
@@ -827,6 +828,7 @@ header {
 
 .slider__bottom:hover {
   transform: scale(1.1);
+  transition: transform 0.5s;
 }
 
 @keyframes slider__track--left {
