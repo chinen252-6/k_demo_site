@@ -210,14 +210,14 @@ header {
     top: 0;
     right: -100%;
     width: 100%;
-   
+    display:none;
     background-color: $gray;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    transition: right 0.3s ease;
+    transition: right 0.7s ease;
     padding-top:10rem;
     padding-left:10rem;
     z-index:10;
@@ -249,6 +249,7 @@ header {
 
 .header__flex__right__humb__list.active {
     right: 0;
+ 
 }
 .close-button {
     position: absolute;
@@ -940,7 +941,7 @@ transform:scale(1.1);
     font-size: 2rem;
     @include small-pc {
         width:81%;
-        
+        background-size:contain;
     }
     @include tab{
         background-image:none;
@@ -1013,6 +1014,7 @@ transform:scale(1.1);
         width:70%;
         margin-left:auto;
         margin-right:auto;
+        text-align: center;
 
     }
     @include sp{
@@ -1024,6 +1026,7 @@ transform:scale(1.1);
            padding-bottom:2rem;
            margin-left:auto;
            margin-right:auto;
+           
         }
         @include sp{
             height:auto;
@@ -1037,10 +1040,16 @@ transform:scale(1.1);
             margin-left:auto;
             margin-right:auto;
             padding-left:0;
+            text-align: left;
         }
     }
 }
 .contact__title__logo{
+    @include tab{
+        margin-left:auto;
+        margin-right:auto;
+        display: inline-block;
+    }
     @include sp{
         display:none;
     }
