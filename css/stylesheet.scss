@@ -716,6 +716,7 @@ header {
 }
 .product-wrap__flex__right__show:hover{
 transform:scale(1.1);
+transition: transform 0.5s;
 }
 // ラインアップーーーーーーーーーーーーーーーーーーーーーーーーーー
 .slider {
@@ -760,6 +761,7 @@ transform:scale(1.1);
 }
 .slider__bottom:hover{
 transform:scale(1.1);
+transition: transform 0.5s;
 }
 // スライド設定ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 @keyframes slider__track--left {
