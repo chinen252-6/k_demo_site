@@ -12,6 +12,11 @@
         display:block;
     }
 }
+.pac {
+    @include tab{
+        display:none;
+    }
+}
 html {
     font-size: 62.5%;
     background-color: $gray;
@@ -145,6 +150,7 @@ header {
     width: 85%;
     margin-right: auto;
     margin-left: auto;
+    max-width:1200px;
     @include small-pc {
         padding-top:25rem;
     }
@@ -315,11 +321,16 @@ header {
         @include small-pc {
             height:150rem;
         }
-      
-    
     }
 }
-
+@include sp{
+    .top-backimg__pc-tab{
+        display:none;
+    }
+    .top-backimg__sp{
+        height:1700px !important;
+    }
+}
 //NEWSーーーーーーーーーーーーーーーーーーーーーーーーーー
 .news-wrap {
     margin-top: 7rem;
@@ -359,11 +370,19 @@ header {
 
     &__imgtop {
         padding-bottom: 3rem;
+       
         &__top{
         @include sp {
             display:none;
             }
         }
+        &__sp {
+            margin-left:auto;
+            margin-right:auto;
+            padding-top:30px;
+            width:auto !important;
+        }
+       
         
     }
    
@@ -484,6 +503,13 @@ header {
 	border-radius: 12px;
 	overflow: hidden;
 	cursor: pointer;
+    @include sp{
+        width:310px;
+       margin-left:auto;
+       margin-right:auto;
+    
+    }
+ 
     
 }
 .news-wrap__flex__more img {
@@ -497,10 +523,24 @@ header {
 	display: block;
 	-webkit-transition: .4s ease-in-out;
 	transition: .4s ease-in-out;
+    @include sp {
+        width:140px;
+        height:40px;
+        -webkit-transform:none;
+	    transform: none;
+        top:10px;
+    }
 }
 .news-wrap__flex__more:hover img:nth-of-type(2) {
 	opacity: 0;
 }
+@include sp{
+.news-pc-tab{
+    display:none;
+}
+}
+
+
 
 //About usーーーーーーーーーーーーーーーーーーーーーーーーーー
 .about-wrap {
@@ -690,8 +730,19 @@ header {
         }
         &__right {
             &__logo{
-                @include sp {
+                @include tab {
                     width:310px;
+                    display:none;
+                }
+            }
+            &__small-logo {
+                display:none;
+                @include tab {
+                    width:310px;
+                    display:block;
+                    margin-left:auto;
+                    margin-right:auto;
+                    padding-bottom:2rem;
                 }
             }
            
@@ -702,6 +753,7 @@ header {
                 font-style: normal;
                 font-size: 2rem;
                 color: $black;
+              
                 @include tab {
                     width:75%;
                     text-align: left;
@@ -712,6 +764,16 @@ header {
                 }
             }
         }
+    }
+}
+.prodact-image{
+    
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:1rem;
+    padding-bottom:2rem;
+    @include sp {
+        width:300px;
     }
 }
 .producut-logo{
@@ -732,6 +794,12 @@ header {
 	overflow: hidden;
 	cursor: pointer;
     margin-top:5rem;
+    @include sp{
+        width:310px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:2rem;
+    }
     
 }
 .product-wrap__flex__right__show img {
@@ -745,10 +813,22 @@ header {
 	display: block;
 	-webkit-transition: .4s ease-in-out;
 	transition: .4s ease-in-out;
+    @include sp {
+        width:140px;
+        height:40px;
+        -webkit-transform:none;
+	    transform: none;
+        top:10px;
+    }
 }
 .product-wrap__flex__right__show:hover img:nth-of-type(2) {
 	opacity: 0;
     
+}
+@include sp{
+    .product__pc-tab{
+        display:none;
+    }
 }
 // ラインアップーーーーーーーーーーーーーーーーーーーーーーーーーー
 .slider {
@@ -776,7 +856,7 @@ header {
     padding-right:5rem;
    img{
         @include sp{
-        width:300px;
+        width:50vw;
         }
        }
 }
@@ -799,7 +879,12 @@ header {
 	cursor: pointer;
     margin-top:5rem;
     padding-bottom:10rem;
-    
+    @include sp{
+        width:310px;
+       margin-left:auto;
+       margin-right:auto;
+       margin-top:2rem;
+    }
 }
 
 .slider__bottom img {
@@ -814,11 +899,26 @@ header {
 	display: block;
 	-webkit-transition: .4s ease-in-out;
 	transition: .4s ease-in-out;
-    
+    @include sp {
+        width:140px;
+        height:40px;
+        -webkit-transform:none;
+	    transform: none;
+        
+    }
     
 }
 .slider__bottom:hover img:nth-of-type(2) {
 	opacity: 0;
+}
+@include sp{
+    .slider__pc-tab{
+        display:none;
+    }
+}
+.slider__line{
+    
+    text-align: center;
 }
 
 // .slider__bottom {
@@ -853,18 +953,26 @@ header {
     .slider__track {
       display: flex;
       list-style: none;
-      padding: 0
+      padding: 0;
+      
+      
+      
     }
     .slider__track--left {
       animation: slider__track--left 80s infinite linear 0.5s both;
+      
     }
     .slider__main:hover .slider__track--left{
         animation-play-state: paused;
         
       }
     .slider__track__item:hover{
-        transform:scale(1.2,1.2);
+        transform:scale(1.02,1.02);
+        opacity: 0.7;
+        transition: opacity 0.5s;
+        
     }
+   
 // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
     .middle-backimg{
         position: absolute;
@@ -875,10 +983,17 @@ header {
             height:90rem;
             width:100%;
             object-fit:fill;
-           
-          
-            
+            @include sp{
+                margin-top:-45rem;
+                height:170rem;
+            }
         }
+    }
+    @include sp{
+        .middle-backimg__pc-tab{
+            display: none;
+        }
+ 
     }
     
 
@@ -891,6 +1006,9 @@ header {
         padding-bottom:5rem;
         @include small-pc {
             width:90%;
+        }
+        @include tab {
+            padding-top:7rem;
         }
         margin-left: auto;
         margin-right: auto;
@@ -1375,5 +1493,23 @@ footer{
         width:100%;
         object-fit:fill;
         
+    }
+}
+.footer__stb{
+    position:absolute;
+    margin-top:-80rem;
+
+    right:5rem;
+
+    @media screen and (max-width: 1400px) {
+        display:none;
+    }
+}
+.footer__stb-small{
+    position:absolute;
+    margin-top:-85rem;
+    left:5rem;
+    @media screen and (max-width: 1400px) {
+        display:none;
     }
 }
