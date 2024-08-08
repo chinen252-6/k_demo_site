@@ -10,8 +10,14 @@
     display:none;
     @include tab{
         display:block;
+       
     }
 }
+// .pc{
+//     @include tab{
+//         display: none;
+//     }
+// }
 .pac {
     @include tab{
         display:none;
@@ -165,7 +171,7 @@ header {
         padding-top: 15rem;
         @include tab {
             width:50rem;
-            margin-top:-35rem;
+            margin-top:-75rem;
             margin-left:auto;
             margin-right:auto;
         }
@@ -199,9 +205,16 @@ header {
    
 }
 // tab以下------------------------------------------------------
+
 .header__flex{
     display:flex;
     position:relative;
+   overflow: hidden;
+   height:55rem;
+   @include sp {
+    height:51rem;
+   }
+   
     
     &__right{
         margin-left:auto;
@@ -209,6 +222,7 @@ header {
         padding-right:2rem;
         display:flex;
         flex-flow: column;
+        
         
     }
 }
@@ -218,9 +232,9 @@ header {
     top: 0;
     right: -100%;
     width: 100%;
-    display:none;
+    
     background-color: $gray;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -239,7 +253,7 @@ header {
     li{
         font-family:$font-tsuku-b;
         font-weight: 700;
-        font-size:18px;
+        font-size:1.8rem;
         color:$green;
         list-style: none;
         border-bottom:3px dotted $green;
@@ -247,10 +261,15 @@ header {
         margin-bottom:2rem;
         width:21rem;
         text-align: left;
-        
+        @include sp{
+            font-size:1.6rem;
+            margin-bottom:1.5rem;
+        }
     }
 
 }
+
+
 #list-top{
     padding-top:60px;
 }
@@ -293,7 +312,7 @@ header {
     object-fit: cover;
     width:100%;
     position:relative;
-    margin-top:-300px;
+    margin-top:-700px;
     z-index: -10;
 }
 .header__text{
@@ -352,10 +371,13 @@ header {
         margin-top:-20rem;
     }
     @include sp {
-        margin-top:7.5rem;
+        margin-top:-1.5rem;
+    }
+    @media screen and (max-width: 550px) {
+        margin-top:-9rem;
     }
     @media screen and (max-width: 500px) {
-        margin-top:-9rem;
+        margin-top:-20rem;
     }
     @media screen and (max-width: 420px) {
         margin-top:-20rem;

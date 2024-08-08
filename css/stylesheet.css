@@ -193,7 +193,7 @@ header {
 @media screen and (max-width: 959px) {
   .top-heading__text {
     width: 50rem;
-    margin-top: -35rem;
+    margin-top: -75rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -228,6 +228,13 @@ header {
 .header__flex {
   display: flex;
   position: relative;
+  overflow: hidden;
+  height: 55rem;
+}
+@media screen and (max-width: 600px) {
+  .header__flex {
+    height: 51rem;
+  }
 }
 .header__flex__right {
   margin-left: auto;
@@ -242,7 +249,6 @@ header {
   top: 0;
   right: -100%;
   width: 100%;
-  display: none;
   background-color: #F3F3F2;
   display: flex;
   flex-direction: column;
@@ -259,7 +265,7 @@ header {
 .header__flex__right__humb__list li {
   font-family: "fot-tsukuardgothic-std", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #2F5D50;
   list-style: none;
   border-bottom: 3px dotted #2F5D50;
@@ -267,6 +273,12 @@ header {
   margin-bottom: 2rem;
   width: 21rem;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .header__flex__right__humb__list li {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 #list-top {
@@ -311,7 +323,7 @@ header {
      object-fit: cover;
   width: 100%;
   position: relative;
-  margin-top: -300px;
+  margin-top: -700px;
   z-index: -10;
 }
 
@@ -385,12 +397,17 @@ header {
 }
 @media screen and (max-width: 600px) {
   .news-wrap {
-    margin-top: 7.5rem;
+    margin-top: -1.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .news-wrap {
+    margin-top: -9rem;
   }
 }
 @media screen and (max-width: 500px) {
   .news-wrap {
-    margin-top: -9rem;
+    margin-top: -20rem;
   }
 }
 @media screen and (max-width: 420px) {
