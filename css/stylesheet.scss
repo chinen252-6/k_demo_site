@@ -598,7 +598,9 @@ header {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 7rem;
-
+    @include tab{
+        width:90%;
+    }
     &__img {
         padding-bottom: 6.5rem;
         @include tab{
@@ -623,7 +625,7 @@ header {
     display: flex;
     padding-bottom: 5rem;
     @include small-pc {
-        // width:90%;
+        
         margin-left:auto;
         margin-right:auto;
         width:92.5rem;
@@ -632,6 +634,7 @@ header {
         display:block;
         margin-left:auto;
         margin-right:auto;
+        width:90%;
     }
 
     &__img {
@@ -692,6 +695,7 @@ header {
         display:block;
         margin-left:auto;
         margin-right:auto;
+        width:90%;
     }
 
     margin-left: 0;
