@@ -432,15 +432,25 @@ header {
         @include small-pc {
             width:90%;
         }
+        @media screen and (max-width: 800px) {
+            width:98%;
+        }
+        @media screen and (max-width: 650px) {
+            width:100%;
+        }
         @include sp {
             display:flex;
             flex-direction: column;
             margin-left:auto;
             margin-right:auto;
+            width:90%;
             
         }
         &__sideimg {
             padding-right: 4rem;
+            @media screen and (max-width: 800px) {
+                padding-right:3rem;
+            }
             
             @include sp {
                 padding-right:0;
@@ -479,6 +489,12 @@ header {
                 font-size: 1.8rem;
                 color: $black;
                 line-height: 1.5;
+                @media screen and (max-width: 800px) {
+                    line-height:1.2;
+                }
+                @include sp{
+                    line-height: 1.5;;
+                }
             }
             &__title {
                 font-size: 2rem;
