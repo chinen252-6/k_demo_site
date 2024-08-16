@@ -1150,6 +1150,7 @@ header {
     font-weight: 700;
     transition: all 0.5s ease;
     color: $green;
+    margin: 3% auto;
 }
 
 /*アイコンの＋と×*/
@@ -1191,6 +1192,7 @@ header {
     color: $red;
     font-family: $font-tsuku-b;
     font-weight: 700;
+    
     @include sp{
         flex-direction: column;
     }
@@ -1437,15 +1439,23 @@ footer{
         width:100rem;
     }
     @include tab {
+        flex-direction: column; 
+        width:90%;
+    }
+
+    
+    @include sp {
         width:90%;
         flex-direction: column;
     }
 
     &__logo{
         padding-right:2.5rem;
-        @include tab {
+        // @include tab {
+        //     display:none;
+        // }
+        @include sp {
             display:none;
-            
         }
         
     }
@@ -1460,9 +1470,16 @@ footer{
     &__address{
         font-size:2rem;
         @include tab {
+            margin-top:-170px;
+            padding-left:320px;
+
+        }
+        @include sp {
             text-align: left;
             padding-top:4rem;
             padding-bottom:4rem;
+            margin-top:0;
+            padding-left:0;
         }
         &__tel{
             padding-top:6rem;
@@ -1475,14 +1492,20 @@ footer{
         margin-right:0;
         margin-left:auto;
         padding-top:4rem;
-        @include tab{
+        
+        @include tab {
+            margin-right:auto;
+            margin-left:0;
+        }
+        @include sp{
             margin-left:0;
             margin-right:auto;
             text-align: left;
+
         }
         &__list{
             display:flex;
-            @include tab {
+            @include sp {
                 width:90%;
                 flex-direction: column;
             
@@ -1509,7 +1532,7 @@ footer{
         padding-right:5rem;
     }
     li{
-    @include tab {
+    @include sp {
         border-bottom:3px dotted $white;
         width:24rem;
         padding-right:0;
@@ -1519,7 +1542,7 @@ footer{
 }
 .list__bottom{
     li{
-        @include tab {
+        @include sp {
         border-bottom:3px dotted $white;
         width:24rem;
         padding-right:0;
@@ -1532,13 +1555,17 @@ footer{
 }
 
 .list__bottom__privacy{
-    @include tab {
+    @include tab{
+        padding-top:0;
+    }
+    
+    @include sp {
     padding-top:6rem;
     border:none !important;
     }
 }
 .list__bottom__law{
-    @include tab {
+    @include sp {
     border:none !important;
     }
 }
@@ -1563,6 +1590,9 @@ footer{
         height:80rem;
         width:100%;
         object-fit:fill;
+        @include tab{
+            display:none;
+        }
         
     }
 }

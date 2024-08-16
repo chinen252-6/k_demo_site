@@ -1214,6 +1214,7 @@ header {
   font-weight: 700;
   transition: all 0.5s ease;
   color: #2F5D50;
+  margin: 3% auto;
 }
 
 /*アイコンの＋と×*/
@@ -1552,6 +1553,12 @@ footer {
 }
 @media screen and (max-width: 959px) {
   .footer {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer {
     width: 90%;
     flex-direction: column;
   }
@@ -1559,7 +1566,7 @@ footer {
 .footer__logo {
   padding-right: 2.5rem;
 }
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 600px) {
   .footer__logo {
     display: none;
   }
@@ -1576,9 +1583,17 @@ footer {
 }
 @media screen and (max-width: 959px) {
   .footer__address {
+    margin-top: -170px;
+    padding-left: 320px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer__address {
     text-align: left;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    margin-top: 0;
+    padding-left: 0;
   }
 }
 .footer__address__tel {
@@ -1591,6 +1606,12 @@ footer {
 }
 @media screen and (max-width: 959px) {
   .footer__menu {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer__menu {
     margin-left: 0;
     margin-right: auto;
     text-align: left;
@@ -1599,7 +1620,7 @@ footer {
 .footer__menu__list {
   display: flex;
 }
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 600px) {
   .footer__menu__list {
     width: 90%;
     flex-direction: column;
@@ -1623,7 +1644,7 @@ footer {
     padding-right: 5rem;
   }
 }
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 600px) {
   .list__top li {
     border-bottom: 3px dotted #FDFDFD;
     width: 24rem;
@@ -1632,7 +1653,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 600px) {
   .list__bottom li {
     border-bottom: 3px dotted #FDFDFD;
     width: 24rem;
@@ -1643,12 +1664,17 @@ footer {
 
 @media screen and (max-width: 959px) {
   .list__bottom__privacy {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .list__bottom__privacy {
     padding-top: 6rem;
     border: none !important;
   }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 600px) {
   .list__bottom__law {
     border: none !important;
   }
@@ -1677,6 +1703,11 @@ footer {
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+}
+@media screen and (max-width: 959px) {
+  .footer__back img {
+    display: none;
+  }
 }
 
 .footer__stb {
